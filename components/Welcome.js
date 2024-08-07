@@ -88,7 +88,7 @@ export function Welcome() {
             Don't have an account? <Link href="/register"><span className="text-blue-400 cursor-pointer">Register</span></Link>
           </p>
           <p className="text-gray-600">
-            Forgotten password? <Link href="/resetPassword"><span className="text-blue-400 cursor-pointer">Resest</span></Link>
+            Forgotten password? <Link href="/resetPassword"><span className="text-blue-400 cursor-pointer">Reset</span></Link>
           </p>
           </div>
        

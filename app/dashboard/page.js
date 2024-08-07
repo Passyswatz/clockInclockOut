@@ -14,12 +14,12 @@ import { signOut } from "firebase/auth";
 
 
 export default function page() {
-  const {currentUser, loading} = useAuth();
+  const {currentUser} = useAuth();
   const [userData, setUserData] = useState(null);
   const router = useRouter();
 
  useEffect(()=>{
-  if(!loading && !currentUser){
+  if(!currentUser){
     router.push('/');
 
   } else {
@@ -80,7 +80,7 @@ export default function page() {
         <div className=" flex flex-col items-center  ">
           <div className="bg-blue-400 text-black rounded-full w-16 h-16 flex items-center justify-center text-2xl">{userData.email[0].toUpperCase()}
           </div>
-          <p className="text-white pt-4">{userData?.email}</p>
+          <p className="text-white pt-4">{userData.email}</p>
         </div>
     </div>
 
@@ -99,7 +99,7 @@ export default function page() {
           </div>
           <div>
             <CustomButton
-             title="Clock In"
+             title="Clock Out"
              onClick={handleClockOut}
              className="bg-red-600 hover:bg-red-900 text-white font bold py-2 px-4 rounded-lg"/>
           </div>
